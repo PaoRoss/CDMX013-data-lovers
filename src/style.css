@@ -78,6 +78,18 @@ svg{
     margin-left: 24px;
 }
 
+#average {
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 25px;
+    color: #941e7d;
+    font-weight: 400;
+
+
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;

@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import {filterGender, filterSport, filterTeam, orderName} from './data.js';
+import {filterGender, filterSport, filterTeam, orderName, averageData} from './data.js';
 //import athletes from './data/athletes/athletes.js';
 import data from './data/athletes/athletes.js';
 import generadorHTML from './generadorHTML.js'
@@ -11,6 +11,7 @@ const selectSport = document.querySelector('#sport')
 const selectTeam = document.querySelector('#team')
 const element = document.querySelector('#container')
 const order = document.querySelector('#order')
+const calcular = document.querySelector('#average')
 
 // Renderizar Data 
 // Eliminar duplicados
@@ -29,24 +30,30 @@ container.insertAdjacentHTML('afterbegin', html);
 selectGender.addEventListener('change', (e) => {
     element.innerHTML =''
     html =''
-    
 
     let typeGender = filterGender(e.target.value, athletesNew)
 if (e.target.value === "F") {
     typeGender.forEach(athletes =>html+=generadorHTML(athletes));
+
+    calcular.innerHTML = 'The average age of female athletes is: ' + averageData(typeGender).toFixed(0) + ' years.'
     }
 
 if (e.target.value === "M") { 
+    
     typeGender.forEach(athletes =>html+=generadorHTML(athletes));
+
+    calcular.innerHTML = 'The average age of male athletes is: ' + averageData(typeGender).toFixed(0) + ' years.'
     }
 
  if (e.target.value === "all")  {
     athletesNew.forEach(athletes =>html+=generadorHTML(athletes));
+
+    calcular.innerHTML = 'The average age of all athletes is: ' + averageData(athletesNew).toFixed(0) + ' years.'
  }
 container.insertAdjacentHTML('afterbegin', html);
 
 });
-
+console.log(averageData(athletesNew).toFixed(0))
 //Filtrado de Deporte con Evento
 selectSport.addEventListener('change', (e) => {
     element.innerHTML =''
@@ -120,3 +127,5 @@ if (e.target.value === "order")
 
     container.insertAdjacentHTML('afterbegin', html);
     }); 
+
+
