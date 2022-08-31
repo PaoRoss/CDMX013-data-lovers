@@ -78,11 +78,6 @@ select:hover {
     color: black;
 }
 
-svg{
-    margin-top: 32px;
-    margin-left: 24px;
-}
-
 #average {
     height: 100%;
     width: 100%;
@@ -185,9 +180,22 @@ p {
     font-family: var(--fontBody);
 
 }
-.card .back {
-    transform:perspective(600px) rotateY(180deg) ;
+footer {
+    background-color: #941e7d;
+    height: 50px;
+    width: 100%;
 }
+
+
+.social_media {
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #d6d2d6;
+}
+
 
 @media only screen and (max-width: 600px) {
     .logo {
