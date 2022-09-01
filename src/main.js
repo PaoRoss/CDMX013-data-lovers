@@ -11,7 +11,6 @@ const element = document.querySelector('#container')
 const order = document.querySelector('#order')
 const calculation = document.querySelector('#average')
 
-
 // Renderizar Data 
 // Eliminar duplicados
 const information = data.athletes.map(athlete => [athlete.name, athlete]);
@@ -33,20 +32,17 @@ selectGender.addEventListener('change', (e) => {
     let typeGender = filterGender(e.target.value, athletesNew)
     if (e.target.value === 'F') {
         typeGender.forEach(athletes => html += generadorHTML(athletes));
-
         calculation.innerHTML = `<h2>Female Athletes</h2><h3>Statistics.</h3><p class="stats">The average age of female athletes is: ${averageData(typeGender).toFixed(0)} years.</p>`
+
     }
 
     if (e.target.value === 'M') {
-
         typeGender.forEach(athletes => html += generadorHTML(athletes));
-
         calculation.innerHTML = `<h2>Male Athletes</h2><h3>Statistics.</h3><p class="stats">The average age of male athletes is: ${averageData(typeGender).toFixed(0)} years.</p>`
     }
 
     if (e.target.value === 'all') {
         athletesNew.forEach(athletes => html += generadorHTML(athletes));
-
         calculation.innerHTML = `<h2>All Athletes</h2><h3>Statistics.</h3><p class="stats">The average age of all athletes is: ${averageData(athletesNew).toFixed(0)} years.</p>`
     }
     container.insertAdjacentHTML('afterbegin', html);
@@ -59,15 +55,14 @@ selectSport.addEventListener('change', (e) => {
     html = ''
 
     let typeSport = filterSport(e.target.value, athletesNew)
+
     if (e.target.value === 'Rowing') {
         typeSport.forEach(athletes => html += generadorHTML(athletes));
-
         calculation.innerHTML = `<h2>Rowing</h2><h3>Statistics.</h2><p class="stats">Number of athletes competing in Rowing: ${typeSport.length}</p>`
     }
 
     if (e.target.value === 'Gymnastics') {
         typeSport.forEach(athletes => html += generadorHTML(athletes));
-
         calculation.innerHTML = `<h2>Gymnastics</h2><h3>Statistics.</h3><p class="stats">Number of athletes competing in Gymnastics: ${typeSport.length}</p>`
     }
 
@@ -80,6 +75,7 @@ selectSport.addEventListener('change', (e) => {
         calculation.innerHTML = `<h2>All Athletes</h2><h3>Statistics.</h3><p class="stats">Number of athletes competing in the Rio 2016 Olympics: ${athletesNew.length}</p>`
     }
     container.insertAdjacentHTML('afterbegin', html);
+
 });
 
 //Filtrado de Equipo por Evento
@@ -88,7 +84,6 @@ selectTeam.addEventListener('change', (e) => {
     html = ''
 
     let typeTeam = filterTeam(e.target.value, athletesNew);
-
 
     if (e.target.value === 'Italy') {
         typeTeam.forEach(athletes => html += generadorHTML(athletes));
@@ -137,5 +132,6 @@ order.addEventListener('change', (e) => {
 
     }
     container.insertAdjacentHTML('afterbegin', html);
-}); 
 
+
+}); 

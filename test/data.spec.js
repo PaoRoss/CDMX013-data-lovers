@@ -82,4 +82,6 @@ describe('averageData', () => {
     ]
     expect(averageData(athletesShort)).toBe((21 + 28 + 25) / 3);
   });
+
 });
+
