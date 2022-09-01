@@ -17,7 +17,7 @@ En este proyecto manupulamos el conjunto de datos de las Olimpiadas Rio 2016 par
 
 
 ## 2. Diseño de baja fidelidad.
-[![IMG-20220901-124248.jpg](https://i.postimg.cc/MKpn0vLy/IMG-20220901-124248.jpg)](https://postimg.cc/ThB2fYfw)
+[![IMG-20220901-124248.jpg](https://i.postimg.cc/6qnxnLX9/IMG-20220901-124248.jpg)](https://postimg.cc/sGjLRWx8)
 
 ## 3. Diseño de alta fidelidad.
 [![image.png](https://i.postimg.cc/zGxRZJYC/image.png)](https://postimg.cc/Xryv96Jq)
