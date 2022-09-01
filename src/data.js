@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // estas funciones son de ejemplo;
 
+=======
+>>>>>>> fb696fb73411d628f4e28f670d3e025eeeaa06ad
 export const filterGender = (gender, data) => data.filter (athletes => athletes.gender == gender);
 
 export const filterSport = (sport, data ) => data.filter (athletes => athletes.sport == sport);
@@ -22,6 +25,10 @@ export const averageData = (data) => {
   let sum = data.reduce((previous, current) => previous + current.age, 0);
   let promData = sum / data.length;
   return promData;
+<<<<<<< HEAD
 }
 
 //donde se va a realizar las funciones de filtrado, busqueda, ordernar, estadistica.
+=======
+  }
+>>>>>>> fb696fb73411d628f4e28f670d3e025eeeaa06ad
