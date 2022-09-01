@@ -1,10 +1,5 @@
 /* eslint-disable no-undef */
-<<<<<<< HEAD
-import {filterGender, filterSport, filterTeam, orderName, averageData} from './data.js';
-//import athletes from './data/athletes/athletes.js';
-=======
 import { filterGender, filterSport, filterTeam, orderName, averageData } from './data.js';
->>>>>>> fb696fb73411d628f4e28f670d3e025eeeaa06ad
 import data from './data/athletes/athletes.js';
 import generadorHTML from './generadorHTML.js'
 
@@ -14,11 +9,7 @@ const selectSport = document.querySelector('#sport')
 const selectTeam = document.querySelector('#team')
 const element = document.querySelector('#container')
 const order = document.querySelector('#order')
-<<<<<<< HEAD
-const calcular = document.querySelector('#average')
-=======
 const calculation = document.querySelector('#average')
->>>>>>> fb696fb73411d628f4e28f670d3e025eeeaa06ad
 
 // Renderizar Data 
 // Eliminar duplicados
@@ -35,31 +26,6 @@ container.insertAdjacentHTML('afterbegin', html);
 
 //Filtrado Genero con evento
 selectGender.addEventListener('change', (e) => {
-<<<<<<< HEAD
-    element.innerHTML =''
-    html =''
-
-    let typeGender = filterGender(e.target.value, athletesNew)
-if (e.target.value === "F") {
-    typeGender.forEach(athletes =>html+=generadorHTML(athletes));
-
-    calcular.innerHTML = 'The average age of female athletes is: ' + averageData(typeGender).toFixed(0) + ' years.'
-    }
-
-if (e.target.value === "M") { 
-    
-    typeGender.forEach(athletes =>html+=generadorHTML(athletes));
-
-    calcular.innerHTML = 'The average age of male athletes is: ' + averageData(typeGender).toFixed(0) + ' years.'
-    }
-
- if (e.target.value === "all")  {
-    athletesNew.forEach(athletes =>html+=generadorHTML(athletes));
-
-    calcular.innerHTML = 'The average age of all athletes is: ' + averageData(athletesNew).toFixed(0) + ' years.'
- }
-container.insertAdjacentHTML('afterbegin', html);
-=======
     element.innerHTML = ''
     html = ''
 
@@ -80,10 +46,9 @@ container.insertAdjacentHTML('afterbegin', html);
         calculation.innerHTML = `<h2>All Athletes</h2><h3>Statistics.</h3><p class="stats">The average age of all athletes is: ${averageData(athletesNew).toFixed(0)} years.</p>`
     }
     container.insertAdjacentHTML('afterbegin', html);
->>>>>>> fb696fb73411d628f4e28f670d3e025eeeaa06ad
 
 });
-console.log(averageData(athletesNew).toFixed(0))
+
 //Filtrado de Deporte con Evento
 selectSport.addEventListener('change', (e) => {
     element.innerHTML = ''
@@ -167,12 +132,6 @@ order.addEventListener('change', (e) => {
 
     }
     container.insertAdjacentHTML('afterbegin', html);
-<<<<<<< HEAD
-    }); 
-
-
-=======
 
 
 }); 
->>>>>>> fb696fb73411d628f4e28f670d3e025eeeaa06ad
