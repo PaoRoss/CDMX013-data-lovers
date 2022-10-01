@@ -30,7 +30,7 @@ Mediante la web app facilitamos el que los usuarios visitantes puedan visualizar
  Coaches: Eliminar el menú de hamburguesa y pensar en agregar selects y agregar margen entre las tarjetas.
       
 ## 6. Proyecto final.
- https://laurisz94.github.io/CDMX013-data-lovers/
+ https://paoross.github.io/CDMX013-data-lovers/
  
  [![image-1.png](https://i.postimg.cc/2Sh6xhCX/image-1.png)](https://postimg.cc/k2MqJV6x)
  
